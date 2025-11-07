@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>土豆選股（模擬）</title>
+    <style>
+        /* 基礎樣式，模擬復古的瀏覽器預設字體 */
+        body {
+            font-family: 'MS PGothic', 'ＭＳ ゴシック', Arial, sans-serif;
+            margin: 20px;
+            color: #000000;
+            background-color: #FFFFFF;
+            line-height: 1.5;
+        }
+        .container {
+            width: 90%; /* 調整為更具響應性的寬度 */
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            border-bottom: 2px solid #000000;
+            padding-bottom: 5px;
+        }
+        .nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0000FF;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px dashed #CCCCCC;
+        }
+        .new_info {
+            color: #FF0000; /* 模擬醒目的紅色「New」標籤 */
+            font-weight: bold;
+        }
+
+        /* 表格通用樣式 */
+        table {
+            border-collapse: collapse; /* 合併邊框 */
+            width: 100%;
+            table-layout: fixed; /* 讓表格寬度更穩定 */
+        }
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #EEEEEE;
+            font-weight: bold;
+        }
+        /* 熱搜榜的樣式調整，使其看起來更像一個清單 */
+        .hot-search-table td:nth-child(1) {
+            text-align: center; /* 讓排名置中 */
+            font-weight: bold;
+            width: 15%;
+        }
+        .hot-search-table td:nth-child(3) {
+            text-align: right; /* 讓搜尋量靠右對齊 */
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">      
+        <h1 align="center">土豆選股</h1>        
+        
+        <div class="section">
+            <h2>★★★ 土豆熱搜榜 ★★★</h2>            
+            <table class="hot-search-table" border="0" cellpadding="5" cellspacing="0">
+                <thead>
+                    <tr style="background-color: #DDDDDD;">
+                        <th width="15%">排名</th>
+                        <th width="60%">股票/熱門話題</th>
+                        <th width="25%" style="text-align: right;">搜尋量 (參考)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Top 1</td>
+                        <td><a href="#">台積電 (2330)</a></td>
+                        <td style="color: #FF0000;">10,000+</td>
+                    </tr>
+                    <tr>
+                        <td>Top 2</td>
+                        <td><a href="#">元大台灣50 (0050)</a></td>
+                        <td>5,000+</td>
+                    </tr>
+                    <tr>
+                        <td>Top 3</td>
+                        <td><a href="#">中石化 (1314)</a></td>
+                        <td>2,000+</td>
+                    </tr>
+                    <tr>
+                        <td>Top 4</td>
+                        <td><a href="#">華東 (8110)</a></td>
+                        <td>1,000+</td>
+                    </tr>
+                    <tr>
+                        <td>Top 5</td>
+                        <td><a href="#">國泰永續高股息 (00878)</a></td>
+                        <td>2,000+</td>
+                    </tr>
+                    <tr>
+                        <td>Top 6</td>
+                        <td><a href="#">建準 (2421)</a></td>
+                        <td>500+</td>
+                    </tr>
+                    <tr>
+                        <td>Top 7</td>
+                        <td><a href="#">台郡 (6269)</a></td>
+                        <td>200+</td>
+                    </tr>
+                    <tr>
+                        <td>Top 8</td>
+                        <td><a href="#">聯發科 (2454)</a></td>
+                        <td>200+</td>
+                    </tr>
+                    <tr>
+                        <td>Top 9</td>
+                        <td><a href="#">中石化 (1314)</a></td>
+                        <td>2,000+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+     <div class="section">
+            <h2>★★★ 選股報告 ★★★</h2>
+            <!-- 此表格樣式已調整為 CSS 設定，移除多餘的內聯屬性 -->
+            <table cellpadding="5" cellspacing="0">
+                <thead>
+                    <tr style="background-color: #EEEEEE;">
+                        <th width="20%">推薦個股</th>
+                        <th width="30%">趨勢關鍵字</th>
+                        <th width="50%">推薦理由</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>台達電 (2308)</td>
+                        <td>台達電法說會 (7天趨勢: 5,000+ 搜尋量) </td>
+                        <td>AI 供應鏈核心，財報亮眼。 近期法說會公佈第三季營運創歷史新高，並預期第四季「淡季不淡」。市場關注焦點在其 AI 伺服器電源與液冷散熱產品出貨強勁，確認其在 AI 資料中心供應鏈中的關鍵地位，帶動股價受到高度關注 。</td>
+                    </tr>
+                    <tr>
+                        <td>日月光投控 (3711)</td>
+                        <td>日月光股價 / 日月光 (7天趨勢: 5,000+ 搜尋量) </td>
+                        <td>擴大先進封測佈局，受惠 AI/HPC 需求 。近日新聞顯示公司因應 2026 年 AI 與 HPC（高效能運算）需求，持續上調資本支出並專注於先進封測產能 。預期明年先進封測營收將有大幅成長，市場將其視為 AI 產業趨勢下的重要受惠者 。</td>
+                    </tr>
+                    <tr>
+                        <td>玉山金 (2884)</td>
+                        <td>普發一萬登記 (7天趨勢: 50萬+ 搜尋量) </td>
+                        <td>政府刺激消費，銀行業受惠 。普發一萬 相關搜尋量巨大，且趨勢細節中明確提及多間銀行（如玉山銀行、中國信託、台新銀行等）因應政府現金發放而推出的「銀行加碼」與「銀行優惠」活動 。這反映了市場對銀行在普發現金帶動的存款流入與交易活絡抱有期待 。</td>
+                    </tr>
+                    <tr>
+                        <td>太子建設 (2511)</td>
+                        <td>太子集團 (24小時趨勢: 1萬+ 搜尋量) </td>
+                        <td>營建地產熱門話題 。該關鍵字持續出現在 7 天與 24 小時熱搜榜上，顯示市場對太子建設此一大型營建集團有高度關注 。熱搜可能與其特定建案（如和平大苑）或整體房地產市場的新聞有關，暗示營建股有潛在話題性 。</td>
+                    </tr>
+                    <tr>
+                        <td>旺宏 (2337)</td>
+                        <td>旺宏法說會 (7天趨勢: 5,000+ 搜尋量) </td>
+                        <td>高風險高波動的轉機題材 。近期法說會公佈連九季虧損，引起股價波動（法說會後股價曾跌停）。儘管財報不佳，但董事長親自出面承諾「重出江湖」整頓營運，並喊話明年力拚轉盈，且看好 eMMC 市場變化對公司有利 。此為轉機股性質，波動性高，但因話題性強而受關注 。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>
